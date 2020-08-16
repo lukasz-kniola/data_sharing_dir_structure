@@ -14,7 +14,9 @@ Sharing
             +v01
                 #mcro1.sas
                 #mcro2.sas
-            +v02
+                #read_csv (file) [.csv, .attr] -> .sas7bdat
+                #write_csv (dataset) [.sas7bdat] -> .csv, .attr
+         +v02
 
         +request_01:
             +data
