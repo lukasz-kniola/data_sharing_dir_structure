@@ -1,0 +1,47 @@
+Sharing
+    +Studies
+        +study_aa:
+            #UIDs
+            #ARMS
+            #DOMAINS:CATEGORIES:PARAMS
+            #TimePoints
+            +request_01: -> Requests/request_01/programs
+            +request_02: -> Requests/request_02/programs
+        +study_bb:
+
+    +Requests
+        +macros
+            +v01
+                #mcro1.sas
+                #mcro2.sas
+            +v02
+
+        +request_01:
+            +data
+                +deid
+                    +study_aa:
+                        #dataset.sas7bdat
+                    +studu_bb:
+                +orig
+                    +study_aa:
+                        #dataset.sas7bdat
+                    +studu_bb:
+                +secret/keys/vault
+                    #deidmeta.sas7bdat
+                    #password
+                    #deid-key
+            +docs
+            +outputs
+                #req01_stuaa_vv_yymmdd.zip
+            +programs
+                +macros
+                #stuaa_vv.sas
+                #stubb_vv.sas
+            +specs
+
+            #.gitignore
+                '''
+                outputs/**
+                '''
+        +request_02:
+
