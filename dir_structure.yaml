@@ -23,11 +23,11 @@ Sharing
                 +deid
                     +study_aa:
                         #dataset.sas7bdat
-                    +studu_bb:
+                    +study_bb:
                 +orig
                     +study_aa:
                         #dataset.sas7bdat
-                    +studu_bb:
+                    +study_bb:
                 +secret/keys/vault
                     #deidmeta.sas7bdat
                     #password
