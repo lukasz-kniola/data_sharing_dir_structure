@@ -16,30 +16,60 @@ Sharing
                 #mcro2.sas
                 #read_csv (file) [.csv, .attr] -> .sas7bdat
                 #write_csv (dataset) [.sas7bdat] -> .csv, .attr
-         +v02
+            +v02
 
         +request_01:
             +data
                 +deid
-                    +study_aa:
+                    +studyaa:
                         #dataset.sas7bdat
-                    +study_bb:
+                    +studybb:
                 +orig
-                    +study_aa:
+                    +studyaa:
                         #dataset.sas7bdat
-                    +study_bb:
+                    +studybb:
                 +secret/keys/vault
                     #deidmeta.sas7bdat
                     #password
                     #deid-key
             +docs
             +outputs
-                #req01_stuaa_vv_yymmdd.zip
+                #req01_studyaa@pack_yymmdd.zip
             +programs
                 +macros
-                #stuaa_vv.sas
-                #stubb_vv.sas
+                #studyaa@pack.sas
+                #studybb@pack.sas
             +specs
+                #req01_studyaa_deidspec.xlsx
+
+            #.gitignore
+                '''
+                outputs/**
+                '''
+        +request_02:
+
+
+
+        +request_01:
+            +docs
+            +studyaa:
+                +data
+                    +deid
+                        #dataset.sas7bdat
+                    +orig
+                        #dataset.sas7bdat
+                    +secret/keys/vault
+                        #deidmeta.sas7bdat
+                        #password
+                        #deid-key
+                +programs
+                    +macros
+                    #studyaa@pack1.sas
+                    #studyaa@pack2.sas
+                +specs
+                    #req01_studyaa_deidspec.xlsx
+            +outputs
+                #req01_studyaa@pack1_yymmdd.zip
 
             #.gitignore
                 '''
